@@ -1,10 +1,10 @@
 # 3.B Creating your database #
 
-DROP DATABASE IF EXISTS BreeThai;
+DROP DATABASE IF EXISTS subway_restaurant;
 
-CREATE DATABASE IF NOT EXISTS BreeThai; 
+CREATE DATABASE IF NOT EXISTS subway_restaurant; 
 
-USE BreeThai;
+USE subway_restaurant;
 
 # Adding three Tables # 
 
