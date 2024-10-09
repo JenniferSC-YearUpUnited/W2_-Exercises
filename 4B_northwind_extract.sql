@@ -4,11 +4,18 @@
 # Author:                Valon Hoti                                      #
 # Created on:            2010-07-07 20:00                                #
 # ---------------------------------------------------------------------- #
-DROP DATABASE IF EXISTS northwind;
+DROP DATABASE IF EXISTS northwind; ## will delete if there is already a databse ## 
 
-CREATE DATABASE IF NOT EXISTS northwind;
+CREATE DATABASE IF NOT EXISTS northwind; ## will create the database for me ## 
 
-USE northwind;
+USE northwind;  ## The script creates the tables first then the records were added after all the tables were created ##
+				## What is the name of the table that holds the items Northwind sells? The table name "Products" ## 
+                ## What is the name of the table that holds the types (categories) of the items Northwind sells? The tbale name "Categories" will have the category name and description ## 
+				## What are the first and last names of all the Northwind employees? 'Nancy Davolio', 'Andrew Fuller', 'Janet Leverling', 'Margaret Peacock','Steven Buchanan', 'Michael Suyama','Robert King','Laura Callahan', 'Anne Dodsworth' ##
+
+SELECT * FROM products;  ## My query returns 77 records. I can change this by specifing the columns by name (of which I would like to look at for info) instead of selecting * for all columns ##
+SELECT * FROM categories; ## The category id is the unique identifier for the primary key in this table ## 
+SELECT OrderID, OrderDate, ShipName, ShipCountry FROM orders Limit 50; 
 
 # ---------------------------------------------------------------------- #
 # Tables                                                                 #
@@ -101,7 +108,7 @@ CREATE TABLE `Employees` (
     CONSTRAINT `PK_Employees` PRIMARY KEY (`EmployeeID`)
 );
 
-CREATE INDEX `LastName` ON `Employees` (`LastName`);
+CREATE INDEX `LastName` ON `Employees` (`LastName`); 
 
 CREATE INDEX `PostalCode` ON `Employees` (`PostalCode`);
 
